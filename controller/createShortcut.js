@@ -24,10 +24,10 @@ module.exports = function(app){
 
         fs.writeFile(filePath, lines, function(err){
             if(err){
-                throw err;
+                console.log(err);
+            }else{
+                res.download(filePath);
             }
         });
-
-
     });
 }
